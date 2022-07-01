@@ -1,4 +1,4 @@
-i#include<stdio.h>
+#include<stdio.h>
 
 /**
 * main - two nested loops that print the entire alphabet in just lower and upper case
