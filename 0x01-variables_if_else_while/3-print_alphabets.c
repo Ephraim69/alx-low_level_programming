@@ -1,4 +1,4 @@
-#include<stdio.h>
+i#include<stdio.h>
 
 /**
 * main - two nested loops that print the entire alphabet in just lower and upper case
@@ -11,8 +11,8 @@ int main(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 		putchar(i);
-		for (j = 'A'; j <= 'Z'; j++)
-			putchar(j);
+	for (j = 'A'; j <= 'Z'; j++)
+		putchar(j);
 	putchar('\n');
 	return (0);
 }
