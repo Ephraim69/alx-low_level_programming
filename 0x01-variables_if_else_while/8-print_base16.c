@@ -13,8 +13,8 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 		putchar(i);
-		for (j = 'a'; j < 'g'; j++)
-			putchar(j);
+	for (j = 'a'; j < 'g'; j++)
+		putchar(j);
 	putchar('\n');
 	return (0);
 }
