@@ -4,7 +4,7 @@
 * main - two nested loops that print the entire alphabet in just lower and upper case
 * Return: returns 0
 */
-void main(void)
+int main(void)
 {
 	int i;
 	int j;
@@ -14,4 +14,5 @@ void main(void)
 		for (j = 'A'; j <= 'Z'; j++)
 			putchar(j);
 	putchar('\n');
+	return (0);
 }
