@@ -9,7 +9,7 @@
 int print_last_digit(int num)
 {
 	int lastDigit;
-	
+
 	if (num == INT_MIN)
 		num += 1000;
 	if (num < 0)
