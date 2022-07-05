@@ -13,7 +13,6 @@ void jack_bauer(void)
 
 	while (1)
 	{
-		d++;
 		if (d > 9)
 		{
 			d = 0;
@@ -37,5 +36,6 @@ void jack_bauer(void)
 		_putchar(c + '0');
 		_putchar(d + '0');
 		_putchar('\n');
+		d++;
 	}
 }
