@@ -1,23 +1,13 @@
-#include <stdio.h>
+#include<stdio.h>
+#include"main.h"
 
 /**
-* main - prints the string "putchar"
+* main - prints the string _putchar with headers
 * Return: returns 0
 */
 int main(void)
 {
-	int i;
-	char put[] = "_putchar";
-	char *ptr;
-
-	for (i = 0; i < 8; i++)
-	{
-		ptr = &put[i];
-		putchar(*ptr);
-	}
-	putchar ('\n');
+	_putchar();
 
 	return (0);
-
-
 }
