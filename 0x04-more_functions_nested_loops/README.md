@@ -1,2 +1,2 @@
 # More Functions and Nested Loops
-* a function that checks for uppercase character
+* **0-isupper.c** - a function that checks for uppercase character
