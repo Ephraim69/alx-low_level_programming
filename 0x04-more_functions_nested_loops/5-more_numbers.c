@@ -4,7 +4,7 @@
 * more_numbers - prints numbers 0 to 9, ten times
 * Return: returns nothing
 */
-void more_numbers(vod)
+void more_numbers(void)
 {
 	int i, j;
 
