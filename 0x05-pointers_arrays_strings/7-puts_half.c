@@ -19,13 +19,13 @@ void puts_half(char *str)
 	}
 	if (c % 2 == 0)
 	{
-		for (i = c / 2; i <= c; i++)
+		for (i = c / 2; i < c; i++)
 			printf("%c", str[i]);
 		printf("\n");
 	}
 	else if (c % 2 != 0)
 	{
-		for (i = (c + 1) / 2; i <= c; i++)
+		for (i = (c + 1) / 2; i < c; i++)
 			printf("%c", str[i]);
 		printf("\n");
 	}
