@@ -11,13 +11,14 @@ void puts2(char *str)
 {
 	int i;
 
-	for (i = 0; 1 ; i += 2)
+	for (i = 0; 1 ; i++)
 	{
 		if (*(str + i) == 0)
 		{
 			printf("\n");
 			break;
 		}
-		printf("%c", *(str + i));
+		if (i % 2 == 0)
+			printf("%c", *(str + i));
 	}
 }
