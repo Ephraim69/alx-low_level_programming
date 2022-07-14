@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 		d++;
 	for (i = c; i < c + n; i++)
 	{
-		if (i == (c + 98))
+		if (i == 98)
 			break;
 		dest[i] = src[j];
 		j++;
