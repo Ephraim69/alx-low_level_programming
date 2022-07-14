@@ -10,12 +10,10 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, c = 0, d = 0, j = 0;
+	int i, c = 0, j = 0;
 
 	for (i = 0; dest[i] != 0; i++)
 		c++;
-	for (i = 0; src[i] != 0; i++)
-		d++;
 	for (i = c; i < c + n; i++)
 	{
 		if (i == 98)
