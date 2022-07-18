@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 				k++;
 				l++;
 			}
-			if (l == n && needle[j] != 0)
+			if (l == (n - 3))
 				return ((haystack + i));
 		}
 	}
