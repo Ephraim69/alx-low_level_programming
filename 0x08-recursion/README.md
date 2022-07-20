@@ -1,7 +1,7 @@
-# 0x08 - Recursion
-> ## 0-puts_recursion.c
+# 0x08 - Recursion :registered:
+> ### 0-puts_recursion.c
 > > A function that prints a string, followed by a new line
 >
-> ## 1-print_rev_recursion.c
+> ### 1-print_rev_recursion.c
 > > A function that prints a string in reverse
 >
