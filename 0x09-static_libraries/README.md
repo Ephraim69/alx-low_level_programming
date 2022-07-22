@@ -1,8 +1,8 @@
 # 0x09-static_libraries
 ### - libmy.a
 > Create the static library libmy.a containing all the functions listed below:
-> > int _putchar(char c);
-> > int _islower(int c);
+> > int _putchar(char c);\n
+> > int _islower(int c);\n
 > > int _isalpha(int c);
 > > int _abs(int n);
 > > int _isupper(int c);
