@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
+	char *ptr = 0;
 
 	if (argc == 1)
 	{
@@ -20,14 +21,12 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (!strcmp(argv[i], "0"))
-			continue;
-		if (!atoi(argv[i]))
+		sum += strtol(argv[i], &ptr, 10);
+		if (*ptr != 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
