@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 * main - a program that adds positive numbers
@@ -19,6 +20,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
+		if (!strcmp(argv[i], "0"))
+			continue;
 		if (!atoi(argv[i]))
 		{
 			printf("Error\n");
