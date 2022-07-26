@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	/* Counts the length of every character in the argument */
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; 1 ; j++)
 		{
@@ -25,14 +25,14 @@ char *argstostr(int ac, char **av)
 				break;
 		}
 	}
-	c += 12;
+	c += 1;
 	str = (char *) malloc(c);
 	if (str == NULL)
 		return (NULL);
 
 	k = 0;
 	/* Concatenates every argument to the string str */
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; 1 ; j++)
 		{
@@ -46,8 +46,7 @@ char *argstostr(int ac, char **av)
 			}
 		}
 	}
-	for (i = k; i < k + 11; i++)
-		str[i] = ' ';
+	str[k] = '\0';	
 
 	return (str);
 }
