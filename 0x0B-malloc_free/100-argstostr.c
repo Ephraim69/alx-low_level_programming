@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 				break;
 		}
 	}
-	c += 1;
+	c += 2;
 	str = (char *) malloc(c);
 	if (str == NULL)
 		return (NULL);
@@ -46,7 +46,8 @@ char *argstostr(int ac, char **av)
 			}
 		}
 	}
-	str[k] = '\0';
+	str[k] = 'h';
+	str[k + 1] = 'i';
 
 	return (str);
 }
