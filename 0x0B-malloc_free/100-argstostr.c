@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 				break;
 		}
 	}
-	c += 2;
+	c += 12;
 	str = (char *) malloc(c);
 	if (str == NULL)
 		return (NULL);
@@ -46,8 +46,8 @@ char *argstostr(int ac, char **av)
 			}
 		}
 	}
-	str[k] = 'h';
-	str[k + 1] = 'i';
+	for (i = k; i < k + 12; i++)
+		str[i] = ' ';
 
 	return (str);
 }
