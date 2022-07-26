@@ -46,7 +46,7 @@ char *argstostr(int ac, char **av)
 			}
 		}
 	}
-	for (i = k; i < k + 12; i++)
+	for (i = k; i < k + 11; i++)
 		str[i] = ' ';
 
 	return (str);
