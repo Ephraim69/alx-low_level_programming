@@ -24,7 +24,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		c++;
-	if (c == 1 && str[0] == ' ')
+	if (c == 0)
 		return (NULL);
 
 	c = count_words(str);
