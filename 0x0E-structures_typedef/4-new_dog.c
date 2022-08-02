@@ -31,10 +31,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		if (name[i] == '\0')
 			break;
 	}
-	
+
 	for (i = 0, c = 0; owner[i] != '\0'; i++)
 		c++;
-	newDog->owner = malloc(sizeof(char) * (c + 1));	
+	newDog->owner = malloc(sizeof(char) * (c + 1));
 	if (newDog->owner == NULL)
 		return (NULL);
 
