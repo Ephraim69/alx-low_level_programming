@@ -4,7 +4,7 @@
 /**
 * print_name - a function that prints a name
 * @name: the name to be printed
-* @(*f)(char *): a pointer to a funtion that accepts a string as 
+* @f: a pointer to a funtion that accepts a string as
 * parameter and returns nothing
 * Return: returns nothing
 */
