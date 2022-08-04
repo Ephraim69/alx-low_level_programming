@@ -36,13 +36,13 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
+			j++;
 			if (format[i + 1] == '\0')
 			{
 				break;
 			}
 			printf(", ");
 			i++;
-			j++;
 		}
 	printf("\n");
 	va_end(args);
