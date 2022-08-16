@@ -22,7 +22,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		tmp = tmp->next;
 		i++;
-	};
+	}
 	if (index >= i)
 	{
 		return (NULL);
@@ -31,7 +31,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	i = 0;
 	tmp = head;
 
-	/* Moving tht tme pointer to the index position */
+	/* Moving the tmp pointer to the index position */
 	while (tmp && i < index)
 	{
 		tmp = tmp->next;
