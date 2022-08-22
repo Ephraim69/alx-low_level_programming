@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
 		return (-1);
 
 	do {
-		if (i == 0)
-			n = read(fd_from, buf, 1024);
+		n = read(fd_from, buf, 1024);
 		if (n == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -50,7 +49,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		i++;
-	} while ((n = read(fd_from, buf, 1024)) == 1024);
+	} while (n == 1024);
 
 	free_close(buf_ptr, fd1_ptr, fd2_ptr);
 
