@@ -10,6 +10,7 @@ void free_close(char **buf, int *fd1, int *fd2);
 */
 int main(int argc, char *argv[])
 {
+	int i = 0;
 	int n, n1, fd_from, fd_to, *fd1_ptr = &fd_from, *fd2_ptr = &fd_to;
 	char *buf, **buf_ptr = &buf;
 
@@ -30,22 +31,26 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
-	buf = malloc(sizeof(char) * 20480);
+	buf = malloc(sizeof(char) * 1024);
 	if (!buf)
 		return (-1);
 
-	n = read(fd_from, buf, 20480);
-	if (n == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	n1 = write(fd_to, buf, n);
-	if (n1 != n)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-		exit(99);
-	}
+	do {
+		if (i == 0)
+			n = read(fd_from, buf, 1024);
+		if (n == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		n1 = write(fd_to, buf, n);
+		if (n1 != n)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			exit(99);
+		}
+		i++;
+	} while ((n = read(fd_from, buf, 1024)) == 1024);
 
 	free_close(buf_ptr, fd1_ptr, fd2_ptr);
 
